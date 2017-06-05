@@ -1,0 +1,4 @@
+#ifndef LANTEASEMW_HPP
+#define LANTEASEMW_HPP
+
+#endif // LANTEASEMW_HPP
