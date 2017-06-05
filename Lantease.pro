@@ -6,6 +6,10 @@
 
 QT       += core gui
 
+CONFIG   += debug c++14
+
+INCLUDEPATH += includes
+
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Lantease
@@ -24,11 +28,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp
+    src/main/main.cpp \
+    src/lantease/lantease.cpp \
+    src/ui/mainWindow/ui_lantease.cpp \
+    src/ui/aboutLantease/ui_aboutlantease.cpp
+
 
 HEADERS += \
-        mainwindow.h
+    includes/lantease/lantease.hpp \
+    includes/ui/mainWindow/ui_lantease.hpp \
+    includes/ui/aboutLantease/ui_aboutlantease.hpp
 
-FORMS += \
-        mainwindow.ui
+DISTFILES += \
+    docs/licence.md \
+    resources/logos/qt_logo.png \
+    docs/CREDIT.txt
+

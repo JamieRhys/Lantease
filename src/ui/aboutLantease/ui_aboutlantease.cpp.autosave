@@ -101,6 +101,14 @@ void Ui::AboutLantease::createLayouts() {
 void Ui::AboutLantease::createLabels() {
     QPointer<QLabel> label_title = new QLabel(mapWidget.value("widget_top"));
     label_title->setObjectName(QStringLiteral("label_title"));
+    QFont font;
+    font.setPointSize(33);
+    font.setItalic(true);
+    label_title->setFont(font);
+    label_title->setFrameShape(QFrame::StyledPanel);
+    mapLabel.insert(label_title->objectName(), label_title);
+    
+    QPointer<QLabel> label_qt_logo = new QLabel(mapWidget.value("widget_top"));
 }
 
 void Ui::AboutLantease::buildAboutDialog() {
